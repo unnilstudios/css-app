@@ -7,12 +7,152 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js"></script>
 </head>
 <body>
-	<header>
-		<h2>test</h2>
-	</header>
+	<div class="mainContainer">
+		<header>
+			<div class="logo"></div>
+			<label for="show-menu" class="show-menu">&#9776;</label>
+			<input type="checkbox" id="show-menu" role="button">
+			<label for="search-box" class="icon-search"></label>
+			<input type="checkbox" id="search-box" role="button">
+			<div id="search">
+				<input id="input-search" type="text">
+			</div>
+			<ul id="menu">
+				<li><a href="#home"><span class="icon-home"></span><span id="home">Home</span></a></li>
+				<li><a href="#about"><span class="icon-help"></span><span id="about">About us</span></a></li>
+				<li><a href="#ourwork"><span class="icon-noun_7470_cc"></span><span id="work">Our work</span></a></li>
+				<li><a href="#contact"><span class="icon-envelope"></span><span id="contact">Contact</span></a></li>
+			</ul>
+			<div class="clearfix"></div>
+			<div class="gradient-border"></div>
+		</header>
+		<section>
+			<div class="container">
+			<div id="slider1" class="csslider infinity">
+			  <input type="radio" name="slides" id="slides_1">
+			  <input type="radio" name="slides" checked="checked" id="slides_2">
+			  <input type="radio" name="slides" id="slides_3">
+			  <ul>
+			    <li>
+			    	<div class="caption">
+			    		<h1>Lorem ipsum dorem sit</h1>
+			    	</div>
+			    </li>
+			    <li>
+			      <div class="caption">
+		    		<h1>Lorem ipsum dorem sit</h1>
+			    	</div>
+			    </li>
+			    <li>
+			      	<div class="caption">
+			    		<h1>Lorem ipsum dorem sit</h1>
+			    	</div>
+			    </li>
+			  </ul>
+			  <div class="arrows">
+			    <label for="slides_1"></label>
+			    <label for="slides_2"></label>
+			    <label for="slides_3"></label>
+			    <label for="slides_1" class="goto-first"></label>
+			    <label for="slides_3" class="goto-last"></label>
+			  </div>
+			  <div class="navigation">
+			    <div>
+			      <label for="slides_1"></label>
+			      <label for="slides_2"></label>
+			      <label for="slides_3"></label>
+			    </div>
+			  </div>
+			</div>
 
-<script src="js/main.js"></script>
+		</div><!--end of container-->
+		</section>
+		<section>
+			<div class="box-wrapper">
+				<h2>Who we are</h2>	
+				<div class="left-block">
+					<div class="box">
+						<div class="icon-noun_7470_cc"></div>
+					</div>
+				</div>
+				<div class="right-block">
+					<div class="box2">
+						<h5>Lorem ipsum</h5>
+						<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. </p>
+						<p class="show-more">show more</p>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+				<div class="left-block">
+					<div class="box">
+						<div class="icon-thumbs-up"></div>
+					</div>
+				</div>
+				<div class="right-block">
+					<div class="box2">
+						<h5>Lorem ipsum</h5>
+						<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. </p>
+						<p class="show-more">show more</p>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div><!--end of box-wrapper-->
+		</section>
+		<section>
+			<div class="box-wrapper">
+				<h2>What we do</h2>
+				<div class="left-block">
+					<div class="box box-margin">
+						<div class="icon-calculator"></div>
+					</div>
+				</div>
+				<div class="right-block">
+					<div class="box box-margin">
+						<div class="icon-time"></div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+				<div class="left-block">
+					<div class="box box-margin">
+						<div class="icon-cloud"></div>
+					</div>
+				</div>
+				<div class="right-block">
+					<div class="box">
+						<div class="icon-heart"></div>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</section>
+		<footer>
+			<div class="circle">
+				<p class="icon-facebook"></p>
+			</div>
+			<div class="circle">
+				<p class="icon-twitter"></p>
+			</div>
+			<div class="circle">
+				<p class="icon-envelope"></p>
+			</div>
+
+			<ul class="footer-menu">
+				<li><a href="#home">Home</a></li>
+				<li><a href="#about">About us</a></li>
+				<li><a href="#ourwork">Our work</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+			
+			<div class="circle right-btn">
+				<p class="arrow">⬆</p>
+			</div>
+
+		</footer>
+
+	</div><!--end of container-->
+
 </body>
 </html>

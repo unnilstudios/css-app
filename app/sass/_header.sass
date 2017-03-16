@@ -1,0 +1,221 @@
+// main wraper
+.mainContainer
+	min-width: 320px
+	max-width: 768px
+	margin: auto
+	color: $darkgray
+	transition: 1s ease-in-out;
+	overflow: hidden
+
+// clearfix hack
+.clearfix 
+	&:after
+		content: ""
+		display: table
+		clear: both
+
+
+
+header
+	position: relative
+
+	.logo
+		background-image: url('../images/logo-320px.jpg')
+		width: 118px
+		height: 36px
+		margin: 10px 12px
+
+	.show-menu, #show-menu
+		font-size: 20px
+
+	// menu
+	ul
+		position: static
+		list-style-type: none
+		margin: 0 auto
+		padding: 5px 0 0
+		width: 100%
+		opacity: 0
+		overflow: hidden
+		transition: opacity .5s ease
+
+		//Create vertical spacing
+		li
+			margin-bottom: 1px
+			margin-top: -50px
+			transition: margin-top .5s ease
+			opacity: 0
+
+		// Make all menu links full width
+		ul li, li a
+			width: 100%
+			text-transform: uppercase
+
+		.icon-home, .icon-help, .icon-noun_7470_cc , .icon-envelope
+			display: none
+
+		// Style for menu links
+		li a
+			display: block
+			min-width: 100%
+			height: 23px
+			text-align: left
+			padding-left: 10px
+			line-height: 23px
+			color: $darkgray
+			text-decoration: none
+
+		// Hover state for top level links
+		li:nth-child(1):hover a
+			background: $green
+
+		li:nth-child(2):hover a 
+			background: $green2
+
+		li:nth-child(3):hover a 
+			background: $blue2
+
+		li:nth-child(4):hover a 
+			background: $blue
+
+		li:hover a
+			color: white
+
+	.icon-search
+		position: absolute
+		z-index: 999
+		top: 8px
+		right: 20px
+		&:hover
+			color: $green
+	#search
+		position: static
+		display: none
+
+		#input-search
+			position: static
+			width: 0
+			margin: 8px auto
+			display: block
+			
+	// Hide checkbox
+	#show-menu[type=checkbox]
+	    display: none
+
+	#search-box[type=checkbox]
+		display: none
+
+	// Show menu when invisible checkbox is checked
+	#show-menu:checked ~ #menu
+	    opacity: 1
+	    
+
+	    li
+	    	margin-top: 0
+	    	opacity: 1
+
+	#search-box:checked ~ #search
+		display: block
+
+		#input-search
+			width: 95%
+
+	// Display 'show menu' link
+	.show-menu
+		display: block
+		position: absolute
+		right: 55px
+		z-index: 999
+		top: 2px
+		&:hover
+			color: $green
+
+		
+
+	
+
+ // styling gradient border
+.gradient-border
+	background:	url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2JiZDQ0NyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxMzc1YjgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+)
+	background:	-moz-linear-gradient(left, $green 0%, $blue 100%)
+	background:	-webkit-linear-gradient(left, $green 0%, $blue 100%)
+	background-color: #bbd447
+	height: 8px
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bbd447', endColorstr='#1375b8',GradientType=1 )
+
+
+@media screen and (min-width: 480px)
+	header
+		
+			
+		// Make dropdown links appear inline
+		ul
+			list-style-type:none
+			display: block
+			height: auto
+			position: absolute
+			top: 3px
+			left: 138px
+			width: 55%
+			opacity: 1
+			// Create a horizontal list with spacing
+			li
+				display: inline-block
+				width: auto
+				padding-left: 10%
+				opacity: 1
+				
+			li:nth-child(1):hover a
+				background: transparent
+				color: $green
+			li:nth-child(2):hover a
+				background: transparent
+				color: $green2
+			li:nth-child(3):hover a
+				background: transparent
+				color: $blue2
+			li:nth-child(4):hover a
+				background: transparent
+				color: $blue
+
+			.icon-home, .icon-help, .icon-noun_7470_cc , .icon-envelope
+				display: block
+
+
+			#home, #about, #work, #contact
+				display: none
+
+		.show-menu
+			display: none
+		.icon-search
+			top: 30px
+		
+@media screen and (min-width: 768px)
+	header
+		ul
+			left: 210px
+			li
+				padding-left: 3%
+				position: relative
+				display: inline-block
+
+			// create / sign on menu
+			li +li:after
+				content: ""
+				background: $darkgray
+				position: absolute
+				top: 25%
+				left: 10%
+				height: 50%
+				width: 1px
+				ms-transform: rotate(15deg) /* IE 9 */
+				-webkit-transform: rotate(15deg) /* Chrome, Safari, Opera */
+				transform: rotate(15deg)
+
+
+
+			.icon-home, .icon-help, .icon-noun_7470_cc , .icon-envelope
+				display: none
+
+			#home, #about, #work, #contact
+				display: block

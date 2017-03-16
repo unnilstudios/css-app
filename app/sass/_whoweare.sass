@@ -1,0 +1,87 @@
+.box-wrapper
+	min-width: 180px
+	max-width: 415px
+	margin: auto
+
+	h2
+		text-align: center
+		font-size: 26px
+		text-transform: uppercase
+
+
+	.box
+		width: 170px
+		height: 102px
+		background-color: $lightgray
+		position: relative
+		margin: auto
+
+		
+
+		.icon-noun_7470_cc, .icon-thumbs-up, .icon-calculator, .icon-time, .icon-cloud, .icon-heart
+			width: 54px
+			height: 42px
+			position: absolute
+			font-size: 44px
+			top: 50%
+			left: 50%
+			margin: -25px 0 0 -25px
+			text-align: center
+			cursor: pointer
+			&:hover
+				color: $green
+
+	.box-margin
+		margin: 0 auto 24px
+
+	.show-more
+		text-align: center
+		text-transform: uppercase
+		width: 76px
+		padding: 2px
+		font-size: 11px
+		cursor: pointer
+		float: right
+		&:hover
+			color: white
+			background-color: $green
+
+	.box2
+		width: 170px
+		height: 75px
+		position: relative
+		margin: auto
+
+		h5
+			margin: 0
+			padding: 0
+		.text
+			display: none
+
+
+@media screen and (min-width: 480px)
+	.box-wrapper
+		h2
+			text-align: left
+		.box
+			width: 189px
+			height: 113px
+
+		.box-margin
+			margin: 0 auto
+		.left-block
+			float: left
+			margin-bottom: 40px
+			
+			
+		.right-block
+			float: right
+			.box2
+				width: 189px
+				h5
+				.text
+					display: block
+					font-size: 10px
+				.show-more
+					margin: 0
+		
